@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+:Me:as me
+(Menu) as mn
+(No cooking equiment) as pb1
+(No raw material) as pb2
+rectangle kitchen {
+usecase "cooking equiment" as c1
+usecase "raw material" as c2
+usecase "cooking" as c3
+usecase "meal" as c4
+}
+me --> mn
+mn --> c1
+c1 --> c2
+c3 --> c3
+c3 --> c4
+pb1 --> c1#red;line.dashed;text:red : extends
+pb2 --> c2#red;line.dashed;text:red : extends
+@end
+@enduml

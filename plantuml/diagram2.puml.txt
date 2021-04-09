@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+:student:as std
+(computer)as com
+(webpage Error)as we
+(Full number of people)as full
+rectangle RegSystem{
+
+usecase "login" as c1
+usecase "select subject" as c2
+usecase "submit" as c3
+}
+std --> com
+com --> c1
+c1 --> c2
+c2 --> c3
+we --|> c3#red;line.dashed;text:red : extends
+full --|> c3#red;line.dashed;text:red : extends
+@enduml
